@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{food.img.url}}" width="300"height="300">
+        </div>
+        <div class="col-md-6">
+           <h5>{{food.name}}<h5>
+           {{food.desc}}<br>
+            {{food.year}}<br>
+<a class="btn btn-warning" href="{% url 'update' food.id %}">Update</a>
+<a class="btn btn-danger" href="{% url 'delete' food.id %}">Delete</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}
